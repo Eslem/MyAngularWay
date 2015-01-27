@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2015, 10:29:03 AM
+    Author     : eslem
+*/
+
+@import "mixins";
+@import "vars";
+
+.sideBar{
+    width:12%;
+    display:inline-block;
+    float:left;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:#1a1a1a;
+    border-right:1px solid #000;
+    z-index: 999;
+
+    //@include box-shadow(0px 0px 1px 1px $blue-color);
+    @import "mixins";
+    @import "vars";
+    ul{
+        padding:0px;
+        margin:0px;
+        position:relative;
+        height:100%;
+        li{
+            width:100%;
+            display:block;
+            &.logo{   
+                text-align: center;
+                background-color:#111;
+                img{
+                    width: 80%;
+                    display:block;
+                    margin-left: 10%;
+                }
+                label{
+                    width:100%;
+                    font-size: 1.3em;
+                    color:$blue-color;
+                }
+                padding: 15px 0px;
+            }
+
+            &.logout{
+                position:absolute;
+                bottom: 0px;
+                text-align: right;
+            }
+
+            a{
+                text-decoration: none;
+                color:#aaa;
+                cursor: pointer;
+                &:hover{
+                    color:$blue-color;
+                }
+
+                i{
+                    margin-right: 10px;
+                    width:20px;
+                }
+            }
+
+            &:not(.logo){
+                padding-left: 20px;
+                padding-bottom:10px;
+                padding-top:10px;
+                font-size:1em;
+                
+                a i{
+                    font-size: 1.2em;
+                }
+               
+                &.active{
+                    background-color: #0d0d0d;
+                    border-right: 3px solid $blue-color;
+                    a{                        
+                        color:$blue-color;
+                    }
+                }
+            }
+        }
+    }
+    height:100%;
+}
+
+.wrap-body{
+    padding-left: 12%;
+    position:absolute;
+    width:100%;
+    position:absolute;
+    height:100%;    
+}

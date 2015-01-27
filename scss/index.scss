@@ -1,0 +1,138 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2015, 1:54:33 PM
+    Author     : eslem
+*/
+
+@import "mixins";
+@import "vars";
+
+body, html{
+    height:100%;
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+.login{
+    margin-top:5%;
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid #222;
+    padding:10px 15px;
+
+    padding-bottom: 25px;
+    text-align:center;
+    @include border-radius(5px);
+
+    @include box-shadow(0px 0px 1px 1px $blue-color);
+    *{
+        @include transition(all .4s);
+    }
+
+    form{
+        input,button{
+            display: block;
+            @include border-radius(5px);
+
+        }
+
+        input{
+            margin:5px 6px;
+            padding:3px 8px;
+            font-size: 1.1em;
+            width:80%;
+            line-height:1.4em;
+            margin-left:10%;
+            background-color: #222;
+            border:1px solid #0d0d0d;
+            color:#555;
+            @include transition(all .4s);
+
+            &:focus{
+                background-color: #555;
+                color:#111;
+            }
+        }
+
+        button{
+            cursor:pointer;
+            overflow:hidden;
+            margin-top: 10px;
+            width: 80%;
+            margin-left: 10%;
+            line-height: 1.8em;
+            background-color: $blue-color;
+            border:none;
+            padding:5px 8px;
+            color:#222;
+            font-weight: bold;
+
+            &:hover{
+                background-color: $bluedark;
+                color:#eee;
+            }
+
+
+        }
+
+        &:after, &:before{
+            clear:both;
+        }
+    }
+
+    .img{
+        width: 80%;
+        margin-left: 10%;
+        padding:8px 16px;
+
+        img{
+            width: 100%;
+            @include opacity(.6);
+            @include transition(all 1s);
+            &:hover{
+                @include opacity(1);
+                @include transform(rotateY(180deg));
+            }   
+
+            &.flip{
+                @include opacity(0);
+            }
+            
+        }
+
+    }
+}
+
+.flip{
+    @include animation(infinite-spinning .5s infinite);
+    @include opacity(0);
+    @include transition(opacity 3s);
+}
+
+#error{
+    color:#CC0000;
+    display:none;
+}
+
+@-webkit-keyframes infinite-spinning {
+    from {
+        @include transform(rotateY(0deg));
+    }
+    to {
+        @include transform(rotateY(180deg));
+    }
+}
+@keyframes infinite-spinning {
+    from {
+        @include transform(rotateY(0deg));
+    }
+    to {
+        @include transform(rotateY(180deg));
+    }
+}

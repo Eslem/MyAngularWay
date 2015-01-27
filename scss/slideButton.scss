@@ -1,0 +1,41 @@
+@import "mixins";
+
+.slideButton {
+    display:inline-block;
+    overflow:hidden;
+    position:relative;
+
+    &:before, label {
+        @include transition(.2s);
+        position:absolute;
+        width:100%;
+        height:100%;
+        text-align:center;
+    }
+    &:before {
+        left:-100%;
+        font-family:FontAwesome;
+    }
+    label {
+        left:0%;
+    }
+
+    &:hover {
+        &:before {
+            left:0%;
+        }
+        label {
+            left:100%;
+        }
+    }
+
+    &.cart:before {
+        font-family:FontAwesome;
+        content:'\f07a';
+    }
+
+    &.trash:before {
+        font-family:FontAwesome;
+        content:'\f1f8';
+    }
+}

@@ -1,0 +1,27 @@
+.slideButton {
+  display: inline-block;
+  overflow: hidden;
+  position: relative; }
+  .slideButton:before, .slideButton label {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+  .slideButton:before {
+    left: -100%;
+    font-family: FontAwesome; }
+  .slideButton label {
+    left: 0%; }
+  .slideButton:hover:before {
+    left: 0%; }
+  .slideButton:hover label {
+    left: 100%; }
+  .slideButton.cart:before {
+    font-family: FontAwesome;
+    content: '\f07a'; }
+  .slideButton.trash:before {
+    font-family: FontAwesome;
+    content: '\f1f8'; }

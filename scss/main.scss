@@ -1,0 +1,79 @@
+@import "mixins";
+@import "vars";
+
+
+/* ---------------------------------- Html y body ------------------------ */
+html, body {
+    background-color:#111111;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    font-family:$font;
+}  
+
+#log {
+    color:lightgray;
+    text-shadow:0 0 1px black;
+
+    .xdebug-error {
+        color:black;
+        margin-left:20%;
+        text-shadow:none;
+        @include transform(scale(1.5));
+    }
+}
+
+.background {
+    background-size:cover;    
+}
+
+*:not(i){
+    @include box-sizing(border-box);
+}
+
+.diagonal {
+    @include transform(skewX(-25deg));
+    background-color:$blue-color;
+
+    .normalize, &:before {
+        @include transform(skewX(25deg));
+        &:hover {
+            outline:none;
+        }
+    }
+
+    &:before {
+        margin-left:5px;
+    }
+}
+
+.slideButton {
+    cursor:pointer;
+    padding:0;
+    width:96px;
+    height:32px;
+    line-height:32px;
+
+    color:#005F6B;
+    font-size:16px;
+    &:hover {
+        background-color:#005F6B;
+        color:$blue-color;
+        @include transition(all .2s);
+        outline:none;
+    }
+
+    &.long {
+        width:160px;
+    }
+
+    &.cart, &.trash {
+        width:160px;
+
+        &:hover:before {
+            left:-2%;
+        }
+    }
+}

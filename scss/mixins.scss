@@ -1,0 +1,61 @@
+@mixin transition($arguments) {
+    -webkit-transition:$arguments;
+    -moz-transition:$arguments;
+    transition:$arguments;
+}
+
+
+@mixin transition2($arguments, $arg2) {
+    -webkit-transition:$arguments, $arg2;
+    -moz-transition:$arguments, $arg2;
+    transition:$arguments, $arg2;
+}
+
+@mixin transition-delay($arg){
+    -webkit-transition-delay: $arg;
+    transition-delay: $arg;
+}
+
+@mixin scale($size) {
+    transform:scale($size);
+    -webkit-backface-visibility:hidden;
+}
+@mixin box-sizing($sizing) {
+    -moz-box-sizing:$sizing;
+    box-sizing:$sizing;
+}
+@mixin animation($value){
+    -webkit-animation:$value;
+    -moz-animation:$value;
+    -o-animation:$value;
+    animation:$value;
+}
+@mixin filter($filt){
+    -webkit-filter:$filt;
+    -moz-filter:$filt;
+    -o-filter:$filt;
+    -ms-filter:$filt;
+    filter:$filt;
+}
+@mixin transform($arguments) {
+    -webkit-backface-visibility:hidden;
+    transform:$arguments;
+}
+
+@mixin box-shadow($argument){
+    -webkit-box-shadow:$argument;
+    -moz-box-shadow:$argument;
+    box-shadow:$argument;
+}
+
+@mixin border-radius($arg){
+    -moz-border-radius:$arg;
+  -webkit-border-radius: $arg;
+  border-radius: $arg;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

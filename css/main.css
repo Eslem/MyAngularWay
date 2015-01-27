@@ -1,0 +1,60 @@
+/* ---------------------------------- Html y body ------------------------ */
+html, body {
+  background-color: #111111;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Francois One", sans-serif; }
+
+#log {
+  color: lightgray;
+  text-shadow: 0 0 1px black; }
+  #log .xdebug-error {
+    color: black;
+    margin-left: 20%;
+    text-shadow: none;
+    -webkit-backface-visibility: hidden;
+    transform: scale(1.5); }
+
+.background {
+  background-size: cover; }
+
+*:not(i) {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.diagonal {
+  -webkit-backface-visibility: hidden;
+  transform: skewX(-25deg);
+  background-color: #7ed1e2; }
+  .diagonal .normalize, .diagonal:before {
+    -webkit-backface-visibility: hidden;
+    transform: skewX(25deg); }
+    .diagonal .normalize:hover, .diagonal:before:hover {
+      outline: none; }
+  .diagonal:before {
+    margin-left: 5px; }
+
+.slideButton {
+  cursor: pointer;
+  padding: 0;
+  width: 96px;
+  height: 32px;
+  line-height: 32px;
+  color: #005F6B;
+  font-size: 16px; }
+  .slideButton:hover {
+    background-color: #005F6B;
+    color: #7ed1e2;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    outline: none; }
+  .slideButton.long {
+    width: 160px; }
+  .slideButton.cart, .slideButton.trash {
+    width: 160px; }
+    .slideButton.cart:hover:before, .slideButton.trash:hover:before {
+      left: -2%; }

@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2015, 10:29:03 AM
+    Author     : eslem
+*/
+.sideBar {
+  width: 12%;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #1a1a1a;
+  border-right: 1px solid #000;
+  z-index: 999;
+  height: 100%; }
+  .sideBar ul {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    height: 100%; }
+    .sideBar ul li {
+      width: 100%;
+      display: block; }
+      .sideBar ul li.logo {
+        text-align: center;
+        background-color: #111;
+        padding: 15px 0px; }
+        .sideBar ul li.logo img {
+          width: 80%;
+          display: block;
+          margin-left: 10%; }
+        .sideBar ul li.logo label {
+          width: 100%;
+          font-size: 1.3em;
+          color: #7ed1e2; }
+      .sideBar ul li.logout {
+        position: absolute;
+        bottom: 0px;
+        text-align: right; }
+      .sideBar ul li a {
+        text-decoration: none;
+        color: #aaa;
+        cursor: pointer; }
+        .sideBar ul li a:hover {
+          color: #7ed1e2; }
+        .sideBar ul li a i {
+          margin-right: 10px;
+          width: 20px; }
+      .sideBar ul li:not(.logo) {
+        padding-left: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 1em; }
+        .sideBar ul li:not(.logo) a i {
+          font-size: 1.2em; }
+        .sideBar ul li:not(.logo).active {
+          background-color: #0d0d0d;
+          border-right: 3px solid #7ed1e2; }
+          .sideBar ul li:not(.logo).active a {
+            color: #7ed1e2; }
+
+.wrap-body {
+  padding-left: 12%;
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  height: 100%; }

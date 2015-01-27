@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Administrador</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="css/sidebar.css" rel="stylesheet" type="text/css"/>
+		
+		
+
+        <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script src="login.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="sideBar">
+            <ul>
+                <li class="logo">
+                    <img src="../cliente/images/logo2.png" alt=""/>
+                    <label>Dashboard</label>
+                </li>
+                <li class="active" ><a ><i class="fa fa-code"></i> Administrador</a></li>
+                <li onclick="showRoute('user')"><a href="#usuarios"><i class="fa fa-user"></i> Usuarios</a></li>
+                <li><a href="#productos"><i class="fa fa-gamepad"></i> Productos</a></li>
+                <li><a href="#productos"> <i class="fa fa-tags"></i>Categorias</a></li>
+                <li><a href="#pedidos"><i class="fa fa-envelope"></i> Pedidos</a></li>
+                <li><a href="#carritos"><i class="fa fa-shopping-cart"></i> Carritos</a></li>
+                <li class="logout"><a href="#logout"> Salir <i class="fa fa-sign-out"></i></a></li>
+
+            </ul>
+        </div>
+        <div class="wrap-body" id="wrap-body">
+            <div class="login" id="login">
+                <div class="img">
+                    <img id="logo" src="images/logo2.png" alt=""/>
+                </div>
+
+                <form id="loginForm">
+                    <input type="hidden" value="login" name="query">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Contraseña" name="password">
+                    <button type="button" onclick="login(this)"><label><i class="fa fa-sign-in"></i> Login</label></button>
+                    <label class="error" id="error">Error</label>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

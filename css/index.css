@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2015, 1:54:33 PM
+    Author     : eslem
+*/
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px; }
+
+.login {
+  margin-top: 5%;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #222;
+  padding: 10px 15px;
+  padding-bottom: 25px;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 1px 1px #7ed1e2;
+  -moz-box-shadow: 0px 0px 1px 1px #7ed1e2;
+  box-shadow: 0px 0px 1px 1px #7ed1e2; }
+  .login * {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s; }
+  .login form input, .login form button {
+    display: block;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  .login form input {
+    margin: 5px 6px;
+    padding: 3px 8px;
+    font-size: 1.1em;
+    width: 80%;
+    line-height: 1.4em;
+    margin-left: 10%;
+    background-color: #222;
+    border: 1px solid #0d0d0d;
+    color: #555;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s; }
+    .login form input:focus {
+      background-color: #555;
+      color: #111; }
+  .login form button {
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    line-height: 1.8em;
+    background-color: #7ed1e2;
+    border: none;
+    padding: 5px 8px;
+    color: #222;
+    font-weight: bold; }
+    .login form button:hover {
+      background-color: #4090A1;
+      color: #eee; }
+  .login form:after, .login form:before {
+    clear: both; }
+  .login .img {
+    width: 80%;
+    margin-left: 10%;
+    padding: 8px 16px; }
+    .login .img img {
+      width: 100%;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      transition: all 1s; }
+      .login .img img:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-backface-visibility: hidden;
+        transform: rotateY(180deg); }
+      .login .img img.flip {
+        opacity: 0;
+        filter: alpha(opacity=0); }
+
+.flip {
+  -webkit-animation: infinite-spinning 0.5s infinite;
+  -moz-animation: infinite-spinning 0.5s infinite;
+  -o-animation: infinite-spinning 0.5s infinite;
+  animation: infinite-spinning 0.5s infinite;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  transition: opacity 3s; }
+
+#error {
+  color: #CC0000;
+  display: none; }
+
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(0deg); }
+  to {
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg); } }
+@keyframes infinite-spinning {
+  from {
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(0deg); }
+  to {
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg); } }

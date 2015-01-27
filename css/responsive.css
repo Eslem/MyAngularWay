@@ -1,0 +1,154 @@
+/* ---------------------------------- Responsive Design ---------------------------------- */
+@media screen and (max-width: 1024px) {
+  .skewed .unskewed img {
+    height: 150px; } }
+@media screen and (max-width: 768px) {
+  #main-Slider {
+    width: 100%; }
+    #main-Slider .active {
+      width: 100%;
+      height: 400px; }
+    #main-Slider .elements .element {
+      height: 150px;
+      display: inline-block; }
+      #main-Slider .elements .element .text {
+        padding-top: 5px;
+        transform: skewX(15deg); }
+        #main-Slider .elements .element .text .diagonal {
+          padding: 5px;
+          margin: 0 75px; }
+        #main-Slider .elements .element .text h3 {
+          margin: 0px;
+          margin-top: 5px;
+          color: #eeeeee;
+          text-transform: uppercase;
+          font-weight: 200; }
+
+  .game .details, .game .trailer {
+    line-height: 32px;
+    height: 32px;
+    margin-top: -32px;
+    width: 50%; }
+  .game .info div {
+    display: block; }
+  .game:first-child .details {
+    margin-left: 16px; }
+  .game:last-child .trailer {
+    margin-right: 16px; }
+
+  .skewed .unskewed img {
+    height: 134px;
+    margin: 0 -7%; } }
+@media screen and (max-width: 480px) {
+  .back-panel ul {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%; }
+
+  #main-Slider {
+    width: 100%; }
+    #main-Slider .active {
+      width: 100%;
+      height: 200px;
+      overflow: hidden; }
+      #main-Slider .active .description .text {
+        display: none; }
+      #main-Slider .active .description h1 {
+        font-size: 1.2em; }
+      #main-Slider .active .score .text {
+        display: none; }
+    #main-Slider .elements {
+      margin-left: -10px; }
+      #main-Slider .elements .element {
+        height: 75px; }
+        #main-Slider .elements .element .text {
+          padding-top: 0px; }
+          #main-Slider .elements .element .text .diagonal {
+            padding: 2px;
+            margin: 0 5px;
+            font-size: .8em; }
+          #main-Slider .elements .element .text h3 {
+            margin-top: 0px;
+            font-size: .6em; }
+
+  .game .details, .game .trailer {
+    line-height: 17px;
+    height: 17px;
+    margin-top: -17px;
+    width: 50%; }
+  .game:first-child .details {
+    margin-left: 8px; }
+  .game:last-child .trailer {
+    margin-right: 8px; }
+
+  .gallery1, .gallery2 {
+    width: 100%;
+    height: 250px; }
+
+  .gallery1 .imagenes {
+    width: 879%; }
+    .gallery1 .imagenes .game {
+      width: 6%; }
+
+  .skewed .unskewed img {
+    height: 75px; }
+
+  .imagenes {
+    margin-left: -2%; }
+    .imagenes .game {
+      width: 50%;
+      display: inline-block; }
+      .imagenes .game img {
+        height: 140px; }
+      .imagenes .game .precio {
+        text-align: right;
+        padding-right: 10%; }
+
+  div.navbar {
+    position: relative; }
+    div.navbar img.logo {
+      float: left;
+      height: 40px;
+      clear: both;
+      margin: 5px 0px;
+      padding-left: 15px; }
+    div.navbar.invisible {
+      background-color: #1D1F21; }
+    div.navbar ul {
+      display: block;
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px; }
+      div.navbar ul.navbar-right {
+        padding-right: 0px; }
+      div.navbar ul li {
+        display: none;
+        width: 100%; }
+        div.navbar ul li.header {
+          display: block; }
+        div.navbar ul li.slide-nav {
+          display: block;
+          position: fixed;
+          right: 0px;
+          top: 0px;
+          width: auto; }
+    div.navbar form.navbar-form, div.navbar form.navbar-form.navbar-right {
+      padding: 0px;
+      display: none;
+      margin: 0px;
+      clear: both;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px; }
+      div.navbar form.navbar-form input, div.navbar form.navbar-form.navbar-right input {
+        display: block;
+        width: 100%;
+        margin: 5px; }
+        div.navbar form.navbar-form input.form-slideLeft, div.navbar form.navbar-form.navbar-right input.form-slideLeft {
+          opacity: 1; }
+      div.navbar form.navbar-form .hexagon, div.navbar form.navbar-form.navbar-right .hexagon {
+        float: right;
+        margin-bottom: 15px;
+        margin: 9.81px 0; } }
+
+/*# sourceMappingURL=responsive.css.map */
